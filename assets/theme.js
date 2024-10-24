@@ -3093,9 +3093,12 @@ onRerender_fn = function(event) {
           if (blockType === "buy-buttons") {
             element.querySelector("buy-buttons").replaceWith(matchingBlock.querySelector("buy-buttons"));
           } else if (blockType === "quantity-selector") {
-            const existingQuantity = element.querySelector(".quantity-selector__input").quantity;
+            const existingQuantity = element.querySelector(".quantity-selector__input")?.quantity;
             element.replaceWith(matchingBlock);
-            matchingBlock.querySelector(".quantity-selector__input").quantity = existingQuantity;
+            const newSelector = matchingBlock.querySelector(".quantity-selector__input");
+            if (newSelector) {
+              newSelector.quantity = existingQuantity;
+            }
           } else {
             element.replaceWith(matchingBlock);
           }

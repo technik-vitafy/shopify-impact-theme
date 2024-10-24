@@ -157,7 +157,8 @@ Supported variables
               {%- capture accordion_title -%}{{ 'product.general.description' | t }}{%- endcapture -%}
               {%- capture accordion_content -%}<div class="prose">{{ product.description }}</div>{%- endcapture -%}
 
-              {%- render 'accordion', title: accordion_title, content: accordion_content, class: 'product-info__accordion', block: block -%}
+              {%- assign icon = block.settings.custom_icon | default: block.settings.icon -%}
+              {%- render 'accordion', title: accordion_title, content: accordion_content, icon: icon, icon_width: block.settings.icon_width, class: 'product-info__accordion', block: block -%}
             {%- endif -%}
           {%- else -%}
             {%- if product.description != blank -%}
@@ -332,7 +333,9 @@ Supported variables
         {%- when 'collapsible_text' -%}
           {%- if block.settings.title != blank and block.settings.content != blank or block.settings.page.content != blank -%}
             {%- capture accordion_content -%}<div class="prose">{{ block.settings.page.content | default: block.settings.content }}</div>{%- endcapture -%}
-            {%- render 'accordion', title: block.settings.title, content: accordion_content, class: 'product-info__accordion', block: block -%}
+
+            {%- assign icon = block.settings.custom_icon | default: block.settings.icon -%}
+            {%- render 'accordion', title: block.settings.title, content: accordion_content, icon: icon, icon_width: block.settings.icon_width, class: 'product-info__accordion', block: block -%}
           {%- endif -%}
 
         {%- when 'image' -%}
@@ -414,9 +417,9 @@ Supported variables
           {%- endif -%}
 
         {%- when 'share_buttons' -%}
-          <div class="product-form__share">
+          <div class="product-form__share justify-items-{{ block.settings.alignment | replace: 'left', 'start' | replace: 'right', 'end' }}">
             <div class="product-info__share-buttons">
-              <div class="share-buttons justify-{{ block.settings.alignment | replace: 'left', 'start' | replace: 'right', 'end' }}">
+              <div class="share-buttons">
                 <span class="text-subdued">{{- 'general.social.share' | t -}}</span>
 
                 <ul class="h-stack" role="list">

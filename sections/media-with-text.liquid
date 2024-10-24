@@ -28,7 +28,21 @@ CSS
 
     @media screen and (min-width: 1000px) {
       #block-{{ section.id }}-{{ block.id }} {
-        --media-with-text-item-grid-template: {% if block.settings.media_position == 'start' %}"media content" / minmax(0, {{ media_ratio }}fr) minmax(0, {{ content_ratio }}fr){% else %}"content media" / minmax(0, {{ content_ratio }}fr) minmax(0, {{ media_ratio }}fr){% endif %};
+        {%- if section.settings.alternate_media_position -%}
+          {% assign modulo = forloop.index0 | modulo: 2 %}
+
+          {% if modulo == 0 %}
+            --media-with-text-item-grid-template: "media content" / minmax(0, {{ media_ratio }}fr) minmax(0, {{ content_ratio }}fr);
+          {%- else -%}
+            --media-with-text-item-grid-template: "content media" / minmax(0, {{ content_ratio }}fr) minmax(0, {{ media_ratio }}fr);
+          {%- endif -%}
+        {%- else -%}
+          {%- if block.settings.media_position == 'start' -%}
+            --media-with-text-item-grid-template: "media content" / minmax(0, {{ media_ratio }}fr) minmax(0, {{ content_ratio }}fr);
+          {%- else -%}
+            --media-with-text-item-grid-template: "content media" / minmax(0, {{ content_ratio }}fr) minmax(0, {{ media_ratio }}fr);
+          {%- endif -%}
+        {%- endif -%}
       }
     }
   {%- endfor -%}
@@ -154,6 +168,12 @@ LIQUID
       "label": "Full width",
       "info": "Only has effect when spacing is set to none.",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "alternate_media_position",
+      "label": "Alternate media position",
+      "info": "When enabled, block-level media positioning is ignored, and media alternate positions automatically.",
     },
     {
       "type": "select",

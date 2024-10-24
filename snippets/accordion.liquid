@@ -12,6 +12,7 @@ Supported parameters
 
 * title: the title to use for the toggle button
 * icon: an optional icon attached to the title
+* icon_width: an optional icon width (only work for image icons)
 * content: the hidden content inside the accordion
 * open: if set to true the accordion is open by default
 * size: if set to "lg", the font is and spacing is bigger
@@ -25,7 +26,16 @@ Supported parameters
     <div class="accordion__toggle bold">
       {%- if icon -%}
         <div class="text-with-icon">
-          {%- render 'icon' with icon -%}
+          {%- if icon.src != blank -%}
+            {% capture icon_sizes %}{{ icon_width | default: 20 }}px{%- endcapture -%}
+            {% capture icon_widths %}{{ icon_width }},{{ icon_width | times: 2 }},{{ icon_width | times: 3 }}{%- endcapture -%}
+            {% capture icon_style %}--image-max-width: {{ icon_sizes }}{%- endcapture -%}
+
+            {{- icon | image_url: width: icon.width | image_tag: loading: 'lazy', sizes: icon_sizes, widths: icon_widths, style: icon_style -}}
+          {%- else -%}
+            {%- render 'icon' with icon, width: icon_width -%}
+          {%- endif -%}
+
           <span {% if size == 'lg' %}class="h6"{% endif %}>{{- title | escape -}}</span>
         </div>
       {%- else -%}

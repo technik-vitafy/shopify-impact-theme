@@ -105,6 +105,7 @@ button, label, summary, [role="button"], [type="checkbox"], [type="radio"], [typ
 
 [type="search"] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px;
 }
 
@@ -3076,8 +3077,8 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 }
 
 .quantity-selector__input {
-  -webkit-appearance: none;
-  appearance: none;
+  -webkit-appearance: textfield;
+  appearance: textfield;
   min-width: var(--spacing-6);
   width: var(--quantity-input-characters-count, 1ch);
   background: inherit;
@@ -5732,6 +5733,19 @@ product-rerender {
   display: grid;
 }
 
+.footer__policy-links {
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+}
+
+.footer__policy-links li + li:before {
+  content: "•";
+  margin-inline-start: .5rem;
+  margin-inline-end: .5rem;
+  font-size: .75rem;
+}
+
 @media screen and (min-width: 700px) {
   .footer {
     --footer-padding-block: var(--spacing-16);
@@ -7584,6 +7598,11 @@ product-rerender {
 .product-info__offer-list {
   gap: var(--spacing-2);
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: grid;
+}
+
+.product-form__share {
+  grid-template-columns: minmax(0, 1fr);
   display: grid;
 }
 

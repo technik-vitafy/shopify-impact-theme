@@ -78,7 +78,7 @@ Supported variables
                 <div class="text-with-icon">
                   {%- if availability.available -%}
                     {%- render 'icon' with 'success', class: 'text-success' -%}
-                    <span class="text-subdued">{{- 'product.store_availability.pick_up_available' | t }}, {{ availability.pick_up_time | downcase -}}</span>
+                    <span class="text-subdued">{{- 'product.store_availability.pick_up_available' | t }}, {{ availability.pick_up_time -}}</span>
                   {%- else -%}
                     {%- render 'icon' with 'error', class: 'text-error' -%}
                     <span class="text-subdued">{{- 'product.store_availability.pick_up_currently_unavailable' | t -}}</span>

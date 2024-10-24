@@ -110,7 +110,7 @@ LIQUID
                     <span class="badge">{{ section.settings.viewing_product }}</span>
                   {%- endif -%}
 
-                  {%- if chart_product.featured_media -%}
+                  {%- if section.settings.show_product_image and chart_product.featured_media -%}
                     <a href="{{ chart_product.url }}">
                       {{- chart_product.featured_image | image_url: width: chart_product.featured_image.width | image_tag: sizes: '(max-width: 699px) 80px, 150px', widths: '80,150,160,300' -}}
                     </a>
@@ -153,10 +153,12 @@ LIQUID
                 </div>
               {%- else -%}
                 <div class="feature-chart__product">
-                  <div>
-                    {%- capture product_placeholder -%}{% cycle 'product-apparel-1', 'product-apparel-2', 'product-apparel-3' %}{%- endcapture -%}
-                    {{- product_placeholder | placeholder_svg_tag: 'feature-chart__product-placeholder' -}}
-                  </div>
+                  {%- if section.settings.show_product_image -%}
+                    <div>
+                      {%- capture product_placeholder -%}{% cycle 'product-apparel-1', 'product-apparel-2', 'product-apparel-3' %}{%- endcapture -%}
+                      {{- product_placeholder | placeholder_svg_tag: 'feature-chart__product-placeholder' -}}
+                    </div>
+                  {%- endif -%}
 
                   <div class="v-stack gap-5">
                     <div class="v-stack gap-2">
@@ -336,6 +338,12 @@ LIQUID
     },
     {
       "type": "checkbox",
+      "id": "show_product_image",
+      "label": "Show product image",
+      "default": true
+    },
+    {
+      "type": "checkbox",
       "id": "show_product_swatch",
       "label": "Show product swatch",
       "default": true
@@ -344,7 +352,7 @@ LIQUID
       "type": "text",
       "id": "viewing_product",
       "label": "Currently viewing product label",
-      "info": "Badge added on the product page's main product."
+      "info": "Badge added on the product page's main product. For best results, ensure that the product image is visible."
     },
     {
       "type": "header",

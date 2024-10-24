@@ -84,6 +84,9 @@ only way to do it on Shopify right now.
             {%- when 'carousel_thumbnails_left' -%}
               {%- capture sizes -%}(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(730px, 40vw){%- endcapture -%}
 
+            {%- when 'grid_one' -%}
+              {%- capture sizes -%}(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(1200px, 60vw){%- endcapture -%}
+
             {%- when 'grid' -%}
               {%- capture sizes -%}(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(580px, 30vw){%- endcapture -%}
 
