@@ -98,8 +98,9 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     <script>
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({ pageTypeShopify: '{{ request.page_type }}' });
+      // push cart datalayer only on cart page or on event since this might be cached
       // dataLayer.push({ 
-      //   // cartItemsShopify: '{{ cart }}',
+      //   // cartItemsShopify: '{{ cart }}',    
       //   cartItemsShopify: [
       //         {% for item in cart.items %}
       //         {
@@ -113,7 +114,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
       //         }{% if forloop.last == false %},{% endif %}
       //         {% endfor %}
       //     ],
-      //     cartTotalValueShopify: "{{ cart.total_price | money_without_currency }}"        
+      //     cartTotalValueShopify: "{{ cart.total_price | money_without_currency }}"              
       // });
     </script>
 
