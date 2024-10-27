@@ -1,3 +1,18 @@
+<!-- CUSTOM CODE: Track page type -->
+<script>      
+  window.dataLayer = window.dataLayer || [];
+  dataLayer.push({ 
+    productNameShopify: '{{ product.title }}',
+    productBrandShopify: '{{ product.vendor }}',
+    // productIdSimple:
+    productIdShopify: '{{ product.id }}',
+    // productSku
+    productPriceShopify: '{{ product.price }}',
+    // productType
+    productStockShopify: '{{ product.available }}' // should be stock level instead of false/true
+  });
+</script>
+
 {%- render 'section-spacing-collapsing' -%}
 
 <style>
@@ -39,7 +54,7 @@
   }
 </style>
 
-{%- capture product_form_id -%}product-form-{{ product.id }}-{{ section.id }}{%- endcapture -%}
+{%- capture product_form_id -%}product-form-{{ c }}-{{ section.id }}{%- endcapture -%}
 
 <div {% render 'section-properties', tight: true %}>
   <product-rerender id="product-info-{{ product.id }}-{{ section.id }}" observe-form="{{ product_form_id }}" allow-partial-rerender>
