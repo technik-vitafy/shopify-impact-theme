@@ -15,7 +15,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="theme-color" content="{{ settings.header_background }}">
 
-    <!-- Google Tag Manager -->
+    <!-- CUSTOM CODE Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -85,7 +85,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
 
   <body class="{% if settings.zoom_image_on_hover %}zoom-image--enabled{% endif %}">
 
-    <!-- Google Tag Manager (noscript) -->
+    <!-- CUSTOM CODE Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3XC3LMT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -94,9 +94,10 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
 
     <a href="#main" class="skip-to-content sr-only">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
+    <!-- CUSTOM CODE -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      dataLayer.push({ pageTypeShopify: 'request.page_type' });
+      dataLayer.push({ pageTypeShopify: {{ request.page_type }} });
     </script>
 
     {%- if request.page_type != 'password' -%}
