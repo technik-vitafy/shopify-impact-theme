@@ -15,19 +15,21 @@
         "slide-1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/banner_vty.jpg",
+            "mobile_image": "shopify://shop_images/mobile_banner1.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "Tell your story",
-            "title": "Slide title",
-            "heading_tag": "h0",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h6",
             "button_text": "",
             "button_link": "",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 30,
+            "overlay_opacity": 0,
             "background": "",
             "background_gradient": ""
           }
@@ -35,6 +37,8 @@
         "slide-2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/https___landingpage.blog.vitafy.de_wp-content_uploads_sites_3_2024_10_1920x450_OktoberSale_Onsite_241001_DE.jpg",
+            "mobile_image": "shopify://shop_images/mobile_banner2_vty.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -62,7 +66,7 @@
         "allow_transparent_header": false,
         "show_initial_transition": false,
         "image_size": "auto",
-        "controls_type": "numbers",
+        "controls_type": "dots",
         "transition_type": "fade_with_text",
         "autoplay": true,
         "cycle_speed": 6,
