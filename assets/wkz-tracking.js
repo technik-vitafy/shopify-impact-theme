@@ -20,6 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setCookie("wkz", wkz, 7); // Sets the cookie for 7 days
 
     // attach wkz to cart
-    // fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } });
+    fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } });
   }
 });
