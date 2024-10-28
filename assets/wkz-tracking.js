@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
   }
+
+
+  function fetchConfig(type = 'json') {
+    return {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: `application/${type}` },
+    };
+  }  
   
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.has('wkz')) {
@@ -20,6 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setCookie("wkz", wkz, 7); // Sets the cookie for 7 days
 
     // attach wkz to cart
-    // fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } });
+    fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } });
   }
 });
