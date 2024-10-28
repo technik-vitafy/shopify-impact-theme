@@ -22,6 +22,12 @@ html {
   line-height: 1.5;
 }
 
+/* Apply Museo Sans globally */
+body, h1, h2, h3, h4, h5, h6, p, span, a, div, button, input, textarea {
+    font-family: 'Museo Sans', sans-serif;
+}
+
+
 body {
   --background: var(--background-primary);
   --text-color: var(--text-primary);
