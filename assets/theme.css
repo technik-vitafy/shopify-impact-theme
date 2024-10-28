@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('{{ 'MuseoSans_500.otf' | asset_url }}') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*! PhotoSwipe main CSS by Dmytro Semenov | photoswipe.com */
 *, :before, :after {
   box-sizing: border-box;
