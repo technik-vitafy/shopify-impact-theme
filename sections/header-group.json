@@ -50,6 +50,9 @@
       "block_order": [
         "message"
       ],
+      "custom_css": [
+        "* {font-size: 14px; padding: 1.5px 0px; min-width: 100%;}"
+      ],
       "settings": {
         "enable_sticky": false,
         "autoplay": false,
