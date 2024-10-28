@@ -79,6 +79,12 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
     
     <!-- CUSTOM CODE: WKZ Tracking --->
+    <script>
+      const routes = {
+        cart_update_url: "{{ routes.cart_update_url | escape }}",
+        // Add other routes as needed
+      };
+    </script>    
     <script src="{{ 'wkz-tracking.js' | asset_url }}" defer="defer"></script>
 
     {{ content_for_header }}
