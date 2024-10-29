@@ -24,6 +24,7 @@
     "header_text_color": "#1a1a1a",
     "footer_background": "#333333",
     "footer_text_color": "#ffffff",
+    "dialog_background": "#ffffff",
     "primary_button_background": "#1a1a1a",
     "primary_button_text_color": "#ffffff",
     "secondary_button_background": "#f0c417",
@@ -43,6 +44,7 @@
     "product_info_alignment": "start",
     "cart_type": "drawer",
     "cart_icon": "shopping_basket",
+    "cart_show_free_shipping_threshold": true,
     "checkout_accent_color": "#f0c417",
     "checkout_button_color": "#1a1a1a",
     "content_for_index": [
