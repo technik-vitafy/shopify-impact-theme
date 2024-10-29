@@ -89,7 +89,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 15
+            "overlay_opacity": 10
           }
         },
         "collection-2": {
@@ -104,7 +104,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 15
+            "overlay_opacity": 10
           }
         },
         "collection-3": {
@@ -119,7 +119,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 15
+            "overlay_opacity": 10
           }
         },
         "collection_BKWePW": {
@@ -134,7 +134,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 15
+            "overlay_opacity": 10
           }
         }
       },
@@ -146,7 +146,8 @@
       ],
       "custom_css": [
         ".collection-card__content.prose {background: black; border-radius: 4px; padding: 0.5rem 0.75rem 0.475rem;}",
-        "p.h6 {font-size: 1rem;}"
+        "p.h6 {font-size: 1rem;}",
+        "@media screen and (min-width: 1150px) {.section-header {grid-template-columns: 800px; }}"
       ],
       "settings": {
         "full_width": true,
