@@ -51,7 +51,7 @@
         "message"
       ],
       "custom_css": [
-        "* {font-size: 14px; padding: 1.5px 0px; min-width: 100%;}"
+        "* {font-size: 14px; padding: 1.5px 0px; min-width: 100%; margin: 0;}"
       ],
       "settings": {
         "enable_sticky": false,
