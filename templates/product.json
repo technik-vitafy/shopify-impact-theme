@@ -91,40 +91,43 @@
             "collapse_content": true
           }
         },
-        "collapsible_text_MUdUYd": {
-          "type": "collapsible_text",
-          "settings": {
-            "icon": "picto-percent",
-            "icon_width": 20,
-            "title": "Title",
-            "content": "<p>Share some content to your customers about your products.</p>",
-            "page": ""
-          }
-        },
-        "offer_4q469N": {
-          "type": "offer",
-          "settings": {
-            "text_alignment": "start",
-            "icon_position": "aligned",
-            "icon": "picto-coupon",
-            "icon_width": 20,
-            "title": "Shipping",
-            "content": "<p>Short content about your shipping rates or discounts.</p>",
-            "background": "#eaf2ed",
-            "text_color": "#00a341"
-          }
-        },
         "offer_NChKAw": {
           "type": "offer",
           "settings": {
-            "text_alignment": "start",
+            "text_alignment": "center",
             "icon_position": "aligned",
-            "icon": "picto-coupon",
-            "icon_width": 20,
-            "title": "Shipping",
-            "content": "<p>Short content about your shipping rates or discounts.</p>",
-            "background": "#eaf2ed",
-            "text_color": "#00a341"
+            "icon": "picto-validation",
+            "icon_width": 36,
+            "title": "",
+            "content": "<p><strong>Kostenloser Versand </strong>nach DE ab 69 Euro</p>",
+            "background": "#f2f2f2",
+            "text_color": "#000000"
+          }
+        },
+        "offer_afyrr9": {
+          "type": "offer",
+          "settings": {
+            "text_alignment": "center",
+            "icon_position": "aligned",
+            "icon": "picto-validation",
+            "icon_width": 36,
+            "title": "",
+            "content": "<p><strong>30-Tage-Rückgaberecht</strong></p>",
+            "background": "#f2f2f2",
+            "text_color": "#000000"
+          }
+        },
+        "offer_QMPK8t": {
+          "type": "offer",
+          "settings": {
+            "text_alignment": "center",
+            "icon_position": "aligned",
+            "icon": "picto-validation",
+            "icon_width": 36,
+            "title": "",
+            "content": "<p><strong>Sichere Zahlung & Datenschutz</strong></p>",
+            "background": "#f2f2f2",
+            "text_color": "#000000"
           }
         }
       },
@@ -141,9 +144,9 @@
         "buy_buttons",
         "separator_FQAWMr",
         "description",
-        "collapsible_text_MUdUYd",
-        "offer_4q469N",
-        "offer_NChKAw"
+        "offer_NChKAw",
+        "offer_afyrr9",
+        "offer_QMPK8t"
       ],
       "settings": {
         "full_width": true,
