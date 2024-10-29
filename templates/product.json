@@ -12,6 +12,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
         "vendor": {
           "type": "vendor",
           "settings": {
@@ -31,13 +37,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "show_taxes_notice": false
-          }
-        },
-        "rating": {
-          "type": "rating",
-          "settings": {
-            "show_empty": false
+            "show_taxes_notice": true
           }
         },
         "payment_terms": {
@@ -56,7 +56,7 @@
           "settings": {
             "hide_sold_out_variants": false,
             "stack_blocks": true,
-            "selector_style": "block",
+            "selector_style": "dropdown",
             "swatch_selector_style": "swatch",
             "variant_image_options": "",
             "size_chart_page": ""
@@ -78,27 +78,72 @@
             "payment_button_text_color": ""
           }
         },
+        "separator_FQAWMr": {
+          "type": "separator",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "collapse_content": false
+            "collapse_content": true
+          }
+        },
+        "collapsible_text_MUdUYd": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "picto-percent",
+            "icon_width": 20,
+            "title": "Title",
+            "content": "<p>Share some content to your customers about your products.</p>",
+            "page": ""
+          }
+        },
+        "offer_4q469N": {
+          "type": "offer",
+          "settings": {
+            "text_alignment": "start",
+            "icon_position": "aligned",
+            "icon": "picto-coupon",
+            "icon_width": 20,
+            "title": "Shipping",
+            "content": "<p>Short content about your shipping rates or discounts.</p>",
+            "background": "#eaf2ed",
+            "text_color": "#00a341"
+          }
+        },
+        "offer_NChKAw": {
+          "type": "offer",
+          "settings": {
+            "text_alignment": "start",
+            "icon_position": "aligned",
+            "icon": "picto-coupon",
+            "icon_width": 20,
+            "title": "Shipping",
+            "content": "<p>Short content about your shipping rates or discounts.</p>",
+            "background": "#eaf2ed",
+            "text_color": "#00a341"
           }
         }
       },
       "block_order": [
+        "rating",
         "vendor",
         "title",
         "badges",
         "price",
-        "rating",
         "payment_terms",
         "separator",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description"
+        "separator_FQAWMr",
+        "description",
+        "collapsible_text_MUdUYd",
+        "offer_4q469N",
+        "offer_NChKAw"
       ],
       "settings": {
         "full_width": true,
@@ -120,6 +165,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "recommendations_count": 6,
         "products": [
