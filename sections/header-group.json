@@ -51,7 +51,7 @@
         "message"
       ],
       "custom_css": [
-        ".announcement-bar {font-size: 16px; font-weight: 200; margin: 0;}",
+        ".announcement-bar p{font-size: 14px; font-weight: 600;}",
         ".announcement-bar__wrapper {margin: 0; min-width: 100%;}"
       ],
       "settings": {
