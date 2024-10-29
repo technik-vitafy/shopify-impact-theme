@@ -51,7 +51,8 @@
         "message"
       ],
       "custom_css": [
-        ".announcement-bar p{font-size: 14px; font-weight: 600;}",
+        ".announcement-bar p {font-size: 14px; font-weight: 600;}",
+        ".announcement-bar.bg-custom.text-custom {padding: 0.5rem;}",
         ".announcement-bar__wrapper {margin: 0; min-width: 100%;}"
       ],
       "settings": {
