@@ -81,56 +81,60 @@
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify://shop_images/cat_banner.jpg",
             "subheading": "",
-            "title": "",
+            "title": "Fitness",
             "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "heading_tag": "h6",
+            "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 15
           }
         },
         "collection-2": {
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify://shop_images/588x588_01-abnehmen.jpg",
             "subheading": "",
-            "title": "",
+            "title": "Abnehmen",
             "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "heading_tag": "h6",
+            "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 15
           }
         },
         "collection-3": {
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify://shop_images/588x588_03-nutrition.jpg",
             "subheading": "",
-            "title": "",
+            "title": "Ernährung ",
             "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "heading_tag": "h6",
+            "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 15
           }
         },
         "collection_BKWePW": {
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify://shop_images/588x588_04-health.jpg",
             "subheading": "",
-            "title": "",
+            "title": "Gesundheit und Pflege ",
             "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "heading_tag": "h6",
+            "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 15
           }
         }
       },
