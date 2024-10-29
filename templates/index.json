@@ -151,7 +151,7 @@
       "settings": {
         "full_width": true,
         "stack_collections": false,
-        "collections_per_row_mobile": "1",
+        "collections_per_row_mobile": "2",
         "collections_per_row": 4,
         "show_progress_bar": false,
         "subheading": "",
