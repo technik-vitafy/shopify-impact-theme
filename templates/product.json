@@ -148,6 +148,9 @@
         "offer_afyrr9",
         "offer_QMPK8t"
       ],
+      "custom_css": [
+        ".offer.offer--center.bg-custom.text-custom {height: 100%;}"
+      ],
       "settings": {
         "full_width": true,
         "show_fixed_add_to_cart": true,
