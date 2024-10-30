@@ -14,7 +14,7 @@
     "header": {
       "type": "header",
       "custom_css": [
-        "a {font-weight: 600;}"
+        "a {font-weight: 500; color: #333;}"
       ],
       "settings": {
         "enable_sticky": false,
@@ -55,14 +55,14 @@
       ],
       "custom_css": [
         ".announcement-bar p {font-size: 14px; font-weight: 600;}",
-        ".announcement-bar.bg-custom.text-custom {padding: 0.5rem;}",
+        ".announcement-bar.bg-custom.text-custom {padding: 0.375rem;}",
         ".announcement-bar__wrapper {margin: 0; min-width: 100%;}"
       ],
       "settings": {
         "enable_sticky": false,
         "autoplay": false,
         "cycle_speed": 6,
-        "text_size": "text-xs",
+        "text_size": "text-base",
         "navigation_mode": "arrows",
         "scrolling_speed": 10,
         "background": "#d23824",
