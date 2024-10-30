@@ -11,6 +11,23 @@
   "type": "header",
   "name": "Header group",
   "sections": {
+    "custom_html_d4PAmx": {
+      "type": "custom-html",
+      "custom_css": [
+        ".topbar {background-color: #f6f6f7; color: inherit; font-size: 0.75rem;}",
+        "[class*=\" l-container\"],[class^=\"l-container\"] {margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0; padding-left: var(--offset); padding-right: var(--offset); max-width: 75rem;}",
+        ".topbar ul {list-style: none; padding-left: 0; align-items: center; display: flex; justify-content: space-between; margin: auto; height: 2.3125rem; padding: 0px;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "html": "<aside class=\"topbar\">\n<div class=\"l-container\">\n    <ul>\n        <li class=\"show-for-medium-up\">\n            <a href=\"https://www.vitafy.de/versand\">Portofrei ab 69 Euro</a>\n        </li>\n        <li class=\"show-for-large-up\">\n            <a href=\"https://www.vitafy.de/widerruf\">30 Tage Rückgaberecht</a>\n        </li>\n        <li>\n        \n<a data-rating-ui-new=\"ts-rating\" rel=\"noopener\" target=\"_blank\" href=\"https://www.trustedshops.de/bewertung/info_XEB05F7A1D7ED3F1880AE9AADE537750E.html?utm_source=shop&amp;utm_medium=link&amp;utm_content=TrustmarkCellNo1__trustmark_and_reviews&amp;utm_campaign=trustbadge_maximised\">\n            <span class=\"rating__stars\">\n              <span class=\"rating__stars-value\" data-ts-rating=\"value\" style=\"width: 93%;\"></span>\n              </span>\n              <span data-ts-rating=\"overall\">32344</span> Kundenbewertungen (<strong data-ts-rating=\"average\">4.68</strong>/5)\n          </a>\n          \n\n<!--         <a \n            data-rating-ui=\"ts-rating\" \n            href=\"https://www.trustedshops.de/bewertung/info_XEB05F7A1D7ED3F1880AE9AADE537750E.html?utm_source=shop&utm_medium=link&utm_content=TrustmarkCellNo1__trustmark_and_reviews&utm_campaign=trustbadge_maximised\"\n            target=\"_blank\" \n            rel=\"noopener\" \n            hidden>\n              <meter class=\"rating\" value=\"0\" min=\"0\" max=\"100\"><span data-ts-rating=\"value\">0</span>% zufriedene Kunden</meter>\n              <span data-ts-rating=\"overall\">0</span> Kundenbewertungen (<strong data-ts-rating=\"average\">0</strong>/5)\n          </a>-->\n          <img src=\"https://cdn11.vitafy.de/vitafy/b_white,f_auto,fl_force_strip.preserve_transparency.progressive,q_auto/media/wysiwyg/footer/trusted_shops.jpeg\" data-src=\"https://cdn11.vitafy.de/vitafy/b_white,f_auto,fl_force_strip.preserve_transparency.progressive,q_auto/media/wysiwyg/footer/trusted_shops.jpeg\" alt=\"Trusted Shops Reviews\" class=\" lazyloaded\" style=\"width: 25px !important; height: 25px !important;\">\n          <img src=\"https://cdn11.vitafy.de/vitafy/b_white,f_auto,fl_force_strip.preserve_transparency.progressive,q_auto/media/wysiwyg/checkout/ssl-datensicherheit.png\" data-src=\"https://cdn11.vitafy.de/vitafy/b_white,f_auto,fl_force_strip.preserve_transparency.progressive,q_auto/media/wysiwyg/checkout/ssl-datensicherheit.png\" alt=\"Secured with SSL\" class=\" lazyloaded\" style=\"width: 25px !important; height: 25px !important;\">             \n      </li>\n    </ul>\n</div>\n</aside>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "header": {
       "type": "header",
       "custom_css": [
@@ -72,6 +89,7 @@
     }
   },
   "order": [
+    "custom_html_d4PAmx",
     "header",
     "announcement-bar"
   ]
