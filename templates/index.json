@@ -393,6 +393,82 @@
         "product_card_text_color": ""
       }
     },
+    "logo_list_mfhm8f": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_9JcpVw": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/bodylab_logo_new_home_vitafy.png",
+            "logo_width": 160,
+            "link": ""
+          }
+        },
+        "logo_X7g9Jm": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/225x100_Logo_vAchterhof_grau_Rand.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_bRdcm9": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/gymqueen-logo_220x100_neu.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_9bNHqW": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/logo_lineavi_225x100_738c1836-eeb0-4d9a-8427-4abefbfbf865.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_em77aw": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Logo_CP-Sports_220x100_149f0b01-0361-4b83-8e09-e659ab82481c.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_RHLa79": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/loca.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_9JcpVw",
+        "logo_X7g9Jm",
+        "logo_bRdcm9",
+        "logo_9bNHqW",
+        "logo_em77aw",
+        "logo_RHLa79"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_mobile": false,
+        "title": "Exklusiv bei vitafy",
+        "content": "",
+        "text_alignment": "center",
+        "items_per_row": 6,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
     "video_6npeey": {
       "type": "video",
       "blocks": {
@@ -432,6 +508,7 @@
     "text_with_icons_LhDdQP",
     "impact-text",
     "featured_collection_tV6ADd",
+    "logo_list_mfhm8f",
     "video_6npeey"
   ]
 }
