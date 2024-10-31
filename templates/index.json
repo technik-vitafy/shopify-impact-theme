@@ -375,7 +375,7 @@
         ],
         "full_width": true,
         "stack_products": false,
-        "show_progress_bar": true,
+        "show_progress_bar": false,
         "products_count": 15,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 5,
