@@ -299,51 +299,50 @@
         "text_color": ""
       }
     },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "",
-        "products": [
-
-        ],
-        "full_width": true,
-        "stack_products": false,
-        "show_progress_bar": false,
-        "products_count": 6,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "subheading": "",
-        "title": "Featured collection",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
-      }
-    },
     "impact-text": {
       "type": "impact-text",
       "blocks": {
         "1664424181b38582d5-0": {
           "type": "item",
           "settings": {
-            "title": "100%",
-            "subheading": "Showcase a benefit of your product",
+            "title": "6.000",
+            "subheading": "Mehr als 6.000 Produkte",
             "content": "",
             "button_text": "",
             "button_url": "",
-            "animate_impact_text": false,
+            "animate_impact_text": true,
+            "animate_impact_text_duration": 2
+          }
+        },
+        "item_jKFRe3": {
+          "type": "item",
+          "settings": {
+            "title": "200",
+            "subheading": "von über 200 Marken",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": true,
+            "animate_impact_text_duration": 2.8
+          }
+        },
+        "item_FaDFiy": {
+          "type": "item",
+          "settings": {
+            "title": "100%",
+            "subheading": "Trusted Shops   zertifiziert",
+            "content": "",
+            "button_text": "",
+            "button_url": "",
+            "animate_impact_text": true,
             "animate_impact_text_duration": 2
           }
         }
       },
       "block_order": [
-        "1664424181b38582d5-0"
+        "1664424181b38582d5-0",
+        "item_jKFRe3",
+        "item_FaDFiy"
       ],
       "settings": {
         "full_width": true,
@@ -865,7 +864,6 @@
     "slideshow",
     "collection-list",
     "text_with_icons_LhDdQP",
-    "featured-collection",
     "impact-text",
     "image-with-text-overlay",
     "video_6npeey",
