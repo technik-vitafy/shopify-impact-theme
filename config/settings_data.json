@@ -152,9 +152,9 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "@media screen and (min-width: 768px) {.show-for-medium-up {display: list-item; }}",
-      "@media screen and (min-width: 1024px) {.show-for-large-up {display: list-item; }}",
-      "@media screen and (max-width: 767px) {.show-for-medium-up, .show-for-large-up {display: none; }}"
+      "/* Show elements for medium and up (768px and above) */@media screen and (min-width: 768px) {.show-for-medium-up {display: inherit !important; }}",
+      "/* Show elements for large and up (1024px and above) */@media screen and (min-width: 1024px) {.show-for-large-up {display: inherit !important; }}",
+      "/* Hide elements for mobile (below 768px) */@media screen and (max-width: 767px) {.show-for-medium-up, .show-for-large-up {display: none !important; }}"
     ]
   }
 }
