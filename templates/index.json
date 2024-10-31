@@ -34,17 +34,16 @@
             "background_gradient": ""
           }
         },
-        "slide-2": {
+        "image_6TPWmV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/https___landingpage.blog.vitafy.de_wp-content_uploads_sites_3_2024_10_1920x450_OktoberSale_Onsite_241001_DE.jpg",
-            "mobile_image": "shopify://shop_images/mobile_banner2_vty.jpg",
+            "image": "shopify://shop_images/adv_banner.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "subheading": "",
             "title": "",
-            "heading_tag": "h6",
+            "heading_tag": "h0",
             "button_text": "",
             "button_link": "",
             "text_color": "#ffffff",
@@ -56,16 +55,17 @@
             "background_gradient": ""
           }
         },
-        "image_6TPWmV": {
+        "slide-2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/adv_banner.jpg",
+            "image": "shopify://shop_images/https___landingpage.blog.vitafy.de_wp-content_uploads_sites_3_2024_10_1920x450_OktoberSale_Onsite_241001_DE.jpg",
+            "mobile_image": "shopify://shop_images/mobile_banner2_vty.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "subheading": "",
             "title": "",
-            "heading_tag": "h0",
+            "heading_tag": "h6",
             "button_text": "",
             "button_link": "",
             "text_color": "#ffffff",
@@ -122,8 +122,8 @@
       },
       "block_order": [
         "slide-1",
-        "slide-2",
         "image_6TPWmV",
+        "slide-2",
         "image_rTGhxC",
         "video_MrEmH4"
       ],
