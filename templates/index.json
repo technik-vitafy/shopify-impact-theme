@@ -284,6 +284,7 @@
         "item_bCrViW",
         "item_dJwV8e"
       ],
+      "disabled": true,
       "custom_css": [
         "div.section-full {padding: 2rem;}"
       ],
@@ -351,7 +352,7 @@
         "impact_text_style": "fill",
         "text_divider": "none",
         "impact_text_size_ratio": 1,
-        "background": "",
+        "background": "#f6f6f7",
         "background_gradient": "",
         "heading_text_color": "",
         "heading_gradient": "linear-gradient(180deg, rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0) 100%)",
