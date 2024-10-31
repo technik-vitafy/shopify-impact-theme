@@ -14,8 +14,9 @@
     "custom_html_d4PAmx": {
       "type": "custom-html",
       "custom_css": [
+        "section{padding: 0;}",
         ".topbar {background-color: #f6f6f7; color: inherit; font-size: 0.75rem; font-weight: 400;}",
-        "[class*=\" l-container\"],[class^=\"l-container\"] {margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0; padding-left: var(--offset); padding-right: var(--offset); max-width: 75rem;}",
+        "[class*=\" l-container\"],[class^=\"l-container\"] {margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0; max-width: 1600px;}",
         ".topbar ul {list-style: none; padding-left: 0; align-items: center; display: flex; justify-content: space-between; margin: auto; height: 2.3125rem; padding: 0px;}",
         "#reviews_topbar {display: flex; gap: 8px; align-items: center;}"
       ],
