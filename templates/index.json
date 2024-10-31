@@ -235,6 +235,38 @@
         "heading_gradient": ""
       }
     },
+    "video_6npeey": {
+      "type": "video",
+      "blocks": {
+        "play_rUT8H3": {
+          "type": "play",
+          "settings": {
+          }
+        },
+        "heading_x479R7": {
+          "type": "heading",
+          "settings": {
+            "text": "Video",
+            "heading_tag": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "play_rUT8H3",
+        "heading_x479R7"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "autoplay": false,
+        "video_size": "sm",
+        "video": "shopify://files/videos/video uber uns.mp4",
+        "external_video_url": "",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -768,6 +800,7 @@
   "order": [
     "slideshow",
     "collection-list",
+    "video_6npeey",
     "featured-collection",
     "impact-text",
     "image-with-text-overlay",
