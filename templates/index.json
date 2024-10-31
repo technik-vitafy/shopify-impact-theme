@@ -364,7 +364,7 @@
     "featured_collection_tV6ADd": {
       "type": "featured-collection",
       "settings": {
-        "collection": "frontpage",
+        "collection": "",
         "products": [
           "gymqueen-crumpy-3x21-5g",
           "bodylab24-whey-protein-1000g",
@@ -373,12 +373,12 @@
         ],
         "full_width": true,
         "stack_products": false,
-        "show_progress_bar": false,
+        "show_progress_bar": true,
         "products_count": 6,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 5,
         "subheading": "",
-        "title": "Featured collection",
+        "title": "Topsellers",
         "content": "",
         "link_url": "",
         "link_text": "View all",
