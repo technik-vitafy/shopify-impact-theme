@@ -453,6 +453,9 @@
         "logo_em77aw",
         "logo_RHLa79"
       ],
+      "custom_css": [
+        ".section-stack{gap: 1rem;}"
+      ],
       "settings": {
         "full_width": true,
         "stack_mobile": true,

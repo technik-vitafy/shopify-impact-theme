@@ -155,7 +155,8 @@
   "platform_customizations": {
     "custom_css": [
       "/* Hide elements for large and down (less than 1024px) */@media screen and (max-width: 1023px) {.show-for-large-up {display: none !important; }}",
-      "/* Hide elements for medium and down (less than 768px) */@media screen and (max-width: 767px) {.show-for-medium-up {display: none !important; }}"
+      "/* Hide elements for medium and down (less than 768px) */@media screen and (max-width: 767px) {.show-for-medium-up {display: none !important; }}",
+      ".section.section-blends.section-full {padding: 2rem 3rem 2rem 3rem;}"
     ]
   }
 }
