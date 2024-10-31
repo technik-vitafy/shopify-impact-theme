@@ -85,6 +85,22 @@
         "text_color": ""
       }
     },
+    "newsletter_WPNV3m": {
+      "type": "newsletter",
+      "settings": {
+        "full_width": true,
+        "show_icon": false,
+        "title": "10 € Willkommensrabatt sichern!",
+        "content": "<p>Jetzt für den Newsletter anmelden und keine Angebote mehr verpassen.</p>",
+        "button_text": "Anmelden",
+        "subtext": "Ich möchte regelmäßig über aktuelle Trends, Angebote und Gutscheine von vitafy.de per E-Mail und Post informiert werden. Eine Abmeldung ist jederzeit über den in jeder E-Mail enthaltenen Abmeldelink oder unter info@vitafy.de möglich. Mit meiner Anmeldung stimme ich den AGB und der Datenschutzerklärung zu.",
+        "background": "#f6f6f7",
+        "background_gradient": "",
+        "text_color": "",
+        "button_background": "#009ccd",
+        "button_text_color": ""
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -132,6 +148,7 @@
   },
   "order": [
     "text-with-icons",
+    "newsletter_WPNV3m",
     "footer"
   ]
 }
