@@ -262,7 +262,7 @@
         "video_size": "sm",
         "video": "shopify://files/videos/video uber uns.mp4",
         "external_video_url": "",
-        "text_color": "#ffffff",
+        "text_color": "#000000",
         "overlay_color": "#000000",
         "overlay_opacity": 0
       }
