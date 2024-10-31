@@ -455,7 +455,7 @@
       ],
       "settings": {
         "full_width": true,
-        "stack_mobile": false,
+        "stack_mobile": true,
         "title": "Exklusiv bei vitafy",
         "content": "",
         "text_alignment": "center",
