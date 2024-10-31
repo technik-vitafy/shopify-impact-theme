@@ -38,6 +38,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/adv_banner.jpg",
+            "mobile_image": "shopify://shop_images/adv_banner_m.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -81,6 +82,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/exclusiv_banner.jpg",
+            "mobile_image": "shopify://shop_images/exclusiv_banner_m.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
