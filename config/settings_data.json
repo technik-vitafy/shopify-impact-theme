@@ -149,5 +149,12 @@
       "product_color_display": "swatch",
       "product_info_alignment": "center"
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "@media screen and (min-width: 768px) {.show-for-medium-up {display: list-item; }}",
+      "@media screen and (min-width: 1024px) {.show-for-large-up {display: list-item; }}",
+      "@media screen and (max-width: 767px) {.show-for-medium-up, .show-for-large-up {display: none; }}"
+    ]
   }
 }
