@@ -152,9 +152,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "/* Show elements for medium and up (768px and above) */@media screen and (min-width: 768px) {.show-for-medium-up {display: inherit !important; }}",
-      "/* Show elements for large and up (1024px and above) */@media screen and (min-width: 1024px) {.show-for-large-up {display: inherit !important; }}",
-      "/* Hide elements for mobile (below 768px) */@media screen and (max-width: 767px) {.show-for-medium-up, .show-for-large-up {display: none !important; }}"
+      "/* Hide elements for large and down (less than 1024px) */@media screen and (max-width: 1023px) {.show-for-large-up {display: none !important; }}",
+      "/* Hide elements for medium and down (less than 768px) */@media screen and (max-width: 767px) {.show-for-medium-up {display: none !important; }}"
     ]
   }
 }
