@@ -127,12 +127,21 @@
             "show_menu_title": true,
             "menu_title": ""
           }
+        },
+        "text_bp7t8G": {
+          "type": "text",
+          "settings": {
+            "title": "About our store",
+            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
+            "enable_follow_on_shop": false
+          }
         }
       },
       "block_order": [
         "links",
         "text",
-        "links_pYbcAb"
+        "links_pYbcAb",
+        "text_bp7t8G"
       ],
       "settings": {
         "show_social_media": false,
