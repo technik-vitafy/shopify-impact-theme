@@ -400,7 +400,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/bodylab_logo_new_home_vitafy.png",
-            "logo_width": 160,
+            "logo_width": 120,
             "link": ""
           }
         },
