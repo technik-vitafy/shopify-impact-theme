@@ -55,11 +55,77 @@
             "background": "",
             "background_gradient": ""
           }
+        },
+        "image_6TPWmV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/adv_banner.jpg",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_rTGhxC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/exclusiv_banner.jpg",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "video_MrEmH4": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/video uber uns.mp4",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h6",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
         }
       },
       "block_order": [
         "slide-1",
-        "slide-2"
+        "slide-2",
+        "image_6TPWmV",
+        "image_rTGhxC",
+        "video_MrEmH4"
       ],
       "settings": {
         "full_width": true,

@@ -18,6 +18,7 @@
     "block_shadow_opacity": 10,
     "block_shadow_vertical_offset": 18,
     "icon_style": "duo",
+    "button_hover_effect": "fade",
     "background": "#ffffff",
     "text_color": "#1a1a1a",
     "header_background": "#ffffff",
