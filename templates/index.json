@@ -246,8 +246,8 @@
         "heading_x479R7": {
           "type": "heading",
           "settings": {
-            "text": "Video",
-            "heading_tag": "h1"
+            "text": "",
+            "heading_tag": "h5"
           }
         }
       },
