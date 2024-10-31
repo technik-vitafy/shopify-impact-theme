@@ -369,12 +369,14 @@
           "gymqueen-crumpy-3x21-5g",
           "bodylab24-whey-protein-1000g",
           "mega-mass-4000-7000g",
-          "schokodrops-vollmilch-mit-finnischem-xylit-750g"
+          "schokodrops-vollmilch-mit-finnischem-xylit-750g",
+          "bodylab24-creatine-powder-500g",
+          "100-whey-gold-standard-4-545g"
         ],
         "full_width": true,
         "stack_products": false,
         "show_progress_bar": true,
-        "products_count": 6,
+        "products_count": 15,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 5,
         "subheading": "",
