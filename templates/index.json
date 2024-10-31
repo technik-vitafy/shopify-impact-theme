@@ -353,7 +353,7 @@
         "text_divider": "none",
         "impact_text_size_ratio": 1,
         "background": "#f6f6f7",
-        "background_gradient": "",
+        "background_gradient": "linear-gradient(180deg, rgba(255, 211, 226, 0), rgba(246, 246, 247, 1) 53.598%, rgba(246, 246, 247, 1) 100%)",
         "heading_text_color": "",
         "heading_gradient": "linear-gradient(180deg, rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0) 100%)",
         "text_color": "",
@@ -454,7 +454,7 @@
         "logo_RHLa79"
       ],
       "custom_css": [
-        ".section-stack{gap: 1rem;}"
+        ".section-stack {gap: 1rem;}"
       ],
       "settings": {
         "full_width": true,
