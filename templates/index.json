@@ -284,11 +284,14 @@
         "item_bCrViW",
         "item_dJwV8e"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "full_width": true,
         "stack_on_mobile": true,
         "title": "",
-        "heading_tag": "h5",
+        "heading_tag": "h6",
         "text_alignment": "center",
         "icon_spacing": "small",
         "background": "#f6f6f7",
