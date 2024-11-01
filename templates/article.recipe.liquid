@@ -1,0 +1,75 @@
+{% layout 'theme' %}
+
+<div class="single-recipe-container">
+  <div class="recipe-header">
+    <h1 class="recipe-title">{{ article.title }}</h1>
+    {% if article.image %}
+      <img class="recipe-image" src="{{ article.image | img_url: 'large' }}" alt="{{ article.title }}">
+    {% endif %}
+  </div>
+
+  <div class="recipe-content">
+    {{ article.content }}
+  </div>
+
+  <div class="recipe-meta">
+    <p><strong>Author:</strong> {{ article.author }}</p>
+    <p><strong>Published on:</strong> {{ article.published_at | date: '%B %d, %Y' }}</p>
+    {% if article.tags.size > 0 %}
+      <p><strong>Tags:</strong>
+        {% for tag in article.tags %}
+          <span class="recipe-tag">{{ tag }}</span>{% if forloop.last == false %}, {% endif %}
+        {% endfor %}
+      </p>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+.single-recipe-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.recipe-title {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.recipe-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.recipe-content {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+.recipe-meta {
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.recipe-tag {
+  display: inline-block;
+  background-color: #f2f2f2;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+</style>
