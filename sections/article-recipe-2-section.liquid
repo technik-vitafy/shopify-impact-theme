@@ -1,6 +1,116 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Recipe Article",
+  "blocks": [
+    {
+      "type": "difficulty",
+      "name": "Difficulty",
+      "settings": [
+        {
+          "id": "difficulty",
+          "label": "Difficulty",
+          "type": "select",
+          "options": [
+            {"label": "Easy", "value": "easy"},
+            {"label": "Medium", "value": "medium"},
+            {"label": "Hard", "value": "hard"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cooking_time",
+      "name": "Cooking Time",
+      "settings": [
+        {
+          "id": "cooking_time",
+          "label": "Cooking Time (in minutes)",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "type": "ingredients",
+      "name": "Ingredients",
+      "settings": [
+        {
+          "id": "ingredients",
+          "label": "Ingredients",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "type": "instructions",
+      "name": "Instructions",
+      "settings": [
+        {
+          "id": "instructions",
+          "label": "Instructions",
+          "type": "richtext"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recipe",
+      "category": "Blog",
+      "blocks": [
+        {
+          "type": "difficulty"
+        },
+        {
+          "type": "cooking_time"
+        },
+        {
+          "type": "ingredients"
+        },
+        {
+          "type": "instructions"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
+
+<div class="recipe-article">
+  <h1 class="recipe-title">{{ article.title }}</h1>
+  <p class="recipe-date">Published on {{ article.published_at | date: '%B %d, %Y' }}</p>
+
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'difficulty' %}
+        <p><strong>Difficulty:</strong> {{ block.settings.difficulty }}</p>
+      {% when 'cooking_time' %}
+        <p><strong>Cooking Time:</strong> {{ block.settings.cooking_time }} minutes</p>
+      {% when 'ingredients' %}
+        <div>
+          <h2>Ingredients</h2>
+          <p>{{ block.settings.ingredients }}</p>
+        </div>
+      {% when 'instructions' %}
+        <div>
+          <h2>Instructions</h2>
+          <div>{{ block.settings.instructions }}</div>
+        </div>
+    {% endcase %}
+  {% endfor %}
+</div>
+
+<style>
+.recipe-article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.recipe-title {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+.recipe-date {
+  color: #666;
+  margin-bottom: 20px;
+}
+</style>

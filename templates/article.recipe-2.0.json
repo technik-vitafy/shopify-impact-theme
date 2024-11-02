@@ -10,28 +10,9 @@
 {
   "sections": {
     "main": {
-      "type": "main-article",
-      "blocks": {
-        "navigation": {
-          "type": "navigation",
-          "settings": {
-          }
-        },
-        "comments": {
-          "type": "comments",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "navigation",
-        "comments"
-      ],
-      "settings": {
-      }
+      "type": "article-recipe-2-section",
+      "settings": {}
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["main"]
 }
