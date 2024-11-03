@@ -6,7 +6,7 @@
     // 'event': 'cartUpdated',
     'testCart': 'testCart',
     'cart': {
-      'total_price': {{ cart.total_price }}, // Divided by 100 to convert cents to dollars
+      'total_price': {{ cart.total_price | divided_by: 100 }}, // Divided by 100 to convert cents to dollars
       'item_count': {{ cart.item_count }},
       'total_discount': {{ cart.total_discount | divided_by: 100 }}, // Total discount applied  
       'items': [
