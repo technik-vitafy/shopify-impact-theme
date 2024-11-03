@@ -5,7 +5,23 @@
   window.dataLayer.push({
     // 'event': 'cartUpdated',
     'testCart': 'testCart',
-    'cart': '{{ cart }}'
+    'cart': {
+      'total_price': {{ cart.total_price | divided_by: 100 }}, // Divided by 100 to convert cents to dollars
+      'item_count': {{ cart.item_count }},
+      'items': [
+        {% for item in cart.items %}
+        {
+          'id': '{{ item.id }}',
+          'product_id': '{{ item.product_id }}',
+          'name': '{{ item.product.title | escape }}',
+          'variant': '{{ item.variant.title | escape }}',
+          'price': {{ item.price | divided_by: 100 }},
+          'quantity': {{ item.quantity }},
+          'total': {{ item.line_price | divided_by: 100 }}
+        },
+        {% endfor %}
+      ]
+    }
   });
 </script>
 <div class="container">
