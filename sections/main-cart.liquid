@@ -6,9 +6,9 @@
     // 'event': 'cartUpdated',
     'testCart': 'testCart',
     'cart': {
-      'total_price': {{ cart.total_price | divided_by: 100 }}, // Divided by 100 to convert cents to dollars
+      'total_price': {{ cart.total_price | divided_by: 100 | round: 2 }}, // Divided by 100 to convert cents to dollars
       'item_count': {{ cart.item_count }},
-      'total_discount': {{ cart.total_discount | divided_by: 100 }}, // Total discount applied  
+      'total_discount': {{ cart.total_discount | divided_by: 100 | round: 2 }}, // Total discount applied  
       'items': [
         {% for item in cart.items %}
         {
@@ -17,10 +17,10 @@
           'vendor': '{{ item.product.vendor | escape }}', // Product vendor
           'name': '{{ item.product.title | escape }}',
           'variant': '{{ item.variant.title | escape }}',
-          'price': {{ item.price | divided_by: 100 }},
+          'price': {{ item.price | divided_by: 100 | round: 2 }},
           'quantity': {{ item.quantity }},
-          'total': {{ item.line_price | divided_by: 100 }},
-          'discount': {{ item.discount_allocations | map: 'amount' | first | divided_by: 100 }} // Discount for this item
+          'total': {{ item.line_price | divided_by: 100 | round: 2 }},
+          'discount': {{ item.discount_allocations | map: 'amount' | first | divided_by: 100 | round: 2 }} // Discount for this item
         },
         {% endfor %}
       ]
