@@ -3,10 +3,11 @@
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     // 'event': 'cartUpdated',
+    'testCart': 'testCart'
     'cart': {{ cart }}
   });
 </script>
-
+TEST
 <div class="container">
   {%- if cart.item_count == 0 -%}
     <div class="empty-state">
