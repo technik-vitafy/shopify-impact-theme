@@ -1,7 +1,9 @@
 <div class="recipe-container">
   {% assign recipe_data = article.metafields.custom.recipe_data %}
+  {% assign edo = article.metafields.recipe_data %}
 
   {% if recipe_data %}
+    {{ edo }}
     {{ recipe_data.value }}
     {{ recipe_data.difficulty }}
     {% for m in recipe_data.value %}
