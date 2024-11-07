@@ -3,8 +3,7 @@
   {% assign edo = article.metafields.recipe_data %}
 
   {% if recipe_data %}
-    {{ edo }}
-    {{ recipe_data.value }}
+    {{ recipe_data.recipe }}
     {{ recipe_data.difficulty }}
     {% for m in recipe_data.value %}
       cazzo
