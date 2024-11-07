@@ -5,7 +5,7 @@
   {% if recipe %}
     <div class="recipe-header">
       <h1 class="recipe-title">{{ article.title }}</h1>
-      <p><strong>Difficulty:</strong> {{ recipe.difficulty | capitalize }}</p>
+      <p><strong>Difficulty:</strong> {{ recipe.data.difficulty | capitalize }}</p>
       <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }} minutes</p>
     </div>
 
