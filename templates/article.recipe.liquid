@@ -1,9 +1,9 @@
 <div class="recipe-container">
   {% assign recipe_data = article.metafields.custom.recipe_data %}
 
-  {% if article.metafields.recipe_data %}
-    {{ recipe_data }}
-        {% for field in recipe_data %}
+  {% if recipe_data %}
+    {% for field in recipe_data %}
+      field
       <p><strong>{{ field.name | capitalize }}:</strong> {{ field.value }}</p>
     {% endfor %}
     <div class="recipe-header">
