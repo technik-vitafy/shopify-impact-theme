@@ -2,10 +2,7 @@
   {% assign recipe_data = article.metafields.custom.recipe_data %}
 
   {% if recipe_data %}
-    {% for field in recipe_data.attributes %}
-      field
-      <p><strong>{{ field.name | capitalize }}:</strong> {{ field.value }}</p>
-    {% endfor %}
+    {{ recipe_data.attributes }}
     <div class="recipe-header">
       <h1 class="recipe-title">{{ article.title }}</h1>
       <p><strong>Difficulty:</strong> {{ recipe_data.recipe.difficulty }}</p>
