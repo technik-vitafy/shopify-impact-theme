@@ -1,11 +1,11 @@
 <div class="recipe-container">
-  {% assign recipe = article.metaobject %}
+  {% assign recipe = article.metafields.recipe.data %}
 
   {% if recipe %}
     <div class="recipe-header">
       <h1 class="recipe-title">{{ article.title }}</h1>
-      <p class="recipe-difficulty"><strong>Difficulty:</strong> {{ recipe.difficulty | capitalize }}</p>
-      <p class="recipe-cooking-time"><strong>Cooking Time:</strong> {{ recipe.cooking_time }} minutes</p>
+      <p><strong>Difficulty:</strong> {{ recipe.difficulty | capitalize }}</p>
+      <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }} minutes</p>
     </div>
 
     <div class="recipe-picture">
