@@ -1,11 +1,11 @@
 <div class="recipe-container">
-  {% assign recipe = article.metafields.recipe_data %}
-
-  {% if recipe %}
+  <!-- {% assign recipe_data = article.metafields.recipe_data %}
+ -->
+  {% if article.metafields.recipe_data %}
     <div class="recipe-header">
       <h1 class="recipe-title">{{ article.title }}</h1>
-      <p><strong>Difficulty:</strong> {{ article.metafields.recipe_data.difficulty }}</p>
-      <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }} minutes</p>
+      <p><strong>Difficulty:</strong> {{ article.metafields.recipe_data.recipe.difficulty }}</p>
+      <p><strong>Cooking Time:</strong> {{ article.metafields.recipe_data.recipe.cooking_time }} minutes</p>
     </div>
 
     <div class="recipe-picture">
