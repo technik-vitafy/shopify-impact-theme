@@ -3,7 +3,7 @@
   {% assign edo = article.metafields.recipe_data %}
 
   {% if recipe_data %}
-    {{ recipe_data | json }}
+    {{ recipe_data | inspect }}
     <div class="recipe-header">
       <h1 class="recipe-title">{{ article.title }}</h1>
       <p><strong>Difficulty:</strong> {{ recipe_data.recipe.difficulty }}</p>
