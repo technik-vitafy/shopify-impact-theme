@@ -99,6 +99,7 @@
     <div class="article-content v-stack gap-8 sm:gap-10">
       <div class="prose">
         {{ article.content }}
+        {% render 'recipekit' %}
       </div>
 
       {%- if section.settings.show_share_buttons -%}
