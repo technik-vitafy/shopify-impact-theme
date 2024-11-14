@@ -71,6 +71,20 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
 
     {{ content_for_header }}
+    <style>
+      @font-face {
+        font-family: 'MuseoSans';
+        src: url("{{ 'museo_sans_bold.woff2' | file_url }}") format("woff2");
+          font-weight: 700;
+          font-style: normal;
+      }
+      @font-face {
+        font-family: 'MuseoSans';
+        src: url("{{ 'museo_sans_regular.woff2' | file_url }}") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
   </head>
