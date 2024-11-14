@@ -33,11 +33,11 @@
     "secondary_button_text_color": "#1a1a1a",
     "product_card_text_color": "#1a1a1a",
     "product_primary_badge_background": "#803cee",
-    "heading_font": "poppins_n6",
+    "heading_font": "sans-serif",
     "heading_font_size": "medium",
     "heading_text_transform": "normal",
     "heading_letter_spacing": -2,
-    "text_font": "poppins_n4",
+    "text_font": "sans-serif",
     "currency_code_enabled": false,
     "heading_apparition": "split_fade",
     "show_vendor": false,
@@ -51,9 +51,7 @@
     "cart_show_free_shipping_threshold": true,
     "checkout_accent_color": "#f0c417",
     "checkout_button_color": "#1a1a1a",
-    "content_for_index": [
-
-    ]
+    "content_for_index": []
   },
   "presets": {
     "Sound": {
@@ -155,7 +153,7 @@
   "platform_customizations": {
     "custom_css": [
       "/* Hide elements for large and down (less than 1024px) */@media screen and (max-width: 1023px) {.show-for-large-up {display: none !important; }}",
-      "/* Hide elements for medium and down (less than 768px) */@media screen and (max-width: 767px) {.show-for-medium-up {display: none !important; }}",
+      " /* Hide elements for medium and down (less than 768px) */@media screen and (max-width: 767px) {.show-for-medium-up {display: none !important; }}",
       ".section.section-blends.section-full {padding-top: 2rem; padding-bottom: 2rem;}"
     ]
   }
