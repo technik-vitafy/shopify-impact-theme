@@ -1,81 +1,17 @@
 /* Museo Sans Regular */
 @font-face {
   font-family: 'MuseoSans';
-  src: url('{{ "exljbris - MuseoSans-300.otf" | asset_url }}') format('opentype');
-  font-weight: 300;
+  src: url('{{ "museo_sans_regular.woff2" | asset_url }}') format('woff2');
+  font-weight: 400;
   font-style: normal;
 }
 
 /* Museo Sans Italic */
 @font-face {
   font-family: 'MuseoSans';
-  src: url('{{ "exljbris - MuseoSans-300Italic.otf" | asset_url }}') format('opentype');
-  font-weight: 300;
-  font-style: italic;
-}
-
-/* Museo Sans Regular (500) */
-@font-face {
-  font-family: 'MuseoSans';
-  src: url('{{ "exljbris - MuseoSans-500.otf" | asset_url }}') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-/* Museo Sans Italic (500) */
-@font-face {
-  font-family: 'MuseoSans';
-  src: url('{{ "exljbris - MuseoSans-500Italic.otf" | asset_url }}') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-}
-
-/* Museo Sans Bold (700) */
-@font-face {
-  font-family: 'MuseoSans';
-  src: url('{{ "exljbris - MuseoSans-700.otf" | asset_url }}') format('opentype');
+  src: url('{{ "museo_sans_bold.woff2" | asset_url }}') format('woff2');
   font-weight: 700;
   font-style: normal;
-}
-
-/* Museo Sans Bold Italic (700) */
-@font-face {
-  font-family: 'MuseoSans';
-  src: url('{{ "exljbris - MuseoSans-700Italic.otf" | asset_url }}') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-}
-
-/* Museo Sans Extra Bold (900) */
-@font-face {
-  font-family: 'MuseoSans';
-  src: url('{{ "exljbris - MuseoSans-900.otf" | asset_url }}') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-/* Museo Sans Extra Bold Italic (900) */
-@font-face {
-  font-family: 'MuseoSans';
-  src: url('{{ "exljbris - MuseoSans-900Italic.otf" | asset_url }}') format('opentype');
-  font-weight: 900;
-  font-style: italic;
-}
-
-/* Museo Sans Light (100) */
-@font-face {
-  font-family: 'MuseoSans';
-  src: url('{{ "exljbris - MuseoSans-100.otf" | asset_url }}') format('opentype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-/* Museo Sans Light Italic (100) */
-@font-face {
-  font-family: 'MuseoSans';
-  src: url('{{ "exljbris - MuseoSans-100Italic.otf" | asset_url }}') format('opentype');
-  font-weight: 100;
-  font-style: italic;
 }
 
 
