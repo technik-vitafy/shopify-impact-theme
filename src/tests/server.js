@@ -2,6 +2,7 @@ import express from 'express';
 import { Liquid } from 'liquidjs';
 import path from 'path';
 import fs from 'fs';
+
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { stores } from './config.js';
@@ -14,26 +15,32 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = 3003;
 
-const getLayout = async (store, newBodyContent) => {
-  const homepageUrl = stores[store].homepage;
-  const response = await fetch(homepageUrl);
-  if (!response.ok) {
-    throw new Error('Network response was not ok');
+const engine = new Liquid({
+  root: [path.join(__dirname, '../components'), path.join(__dirname, '../../snippets')],
+  extname: '.liquid',
+});
+
+const getFontFaceStyleBlock = (store) => {
+  const fonts = stores[store].fonts;
+  if (!fonts) {
+    return '';
   }
 
-  const html = await response.text();
-  const dom = new JSDOM(html);
-  const document = dom.window.document;
+  const fontFaceStyleBlocks = Object.entries(fonts).map(([fontFamily, fontWeights]) => {
+    const fontWeightsStyleBlocks = fontWeights.map(({ url, format, weight, style }) => `
+      @font-face {
+        font-family: '${fontFamily}';
+        src: url('${url}') format('${format}');
+        font-weight: ${weight};
+        font-style: ${style};
+      }
+    `).join('');
 
-  // Remove the whole body content
-  document.body.innerHTML = '';
+    return `<style>${fontWeightsStyleBlocks}</style>`;
+  });
 
-  // Replace it with the new content
-  document.body.innerHTML = newBodyContent;
-
-  return dom.serialize();
-};
-
+  return fontFaceStyleBlocks.join('');
+}
 
 const getCssVariablesStyleBlock = async (store) => {
   const homepageUrl = stores[store].homepage;
@@ -50,31 +57,27 @@ const getCssVariablesStyleBlock = async (store) => {
   return cssVariablesStyleBlock ? cssVariablesStyleBlock.outerHTML : '';
 };
 
-const getSettingsData = async (store) => {
-  const settingsDataResponse = await fetch(stores[store].settingsData);
-  if (!settingsDataResponse.ok) {
-    throw new Error('Network response was not ok');
-  }
-
-  const settingsDataRaw = await settingsDataResponse.text();
-  const settingsData = JSON.parse(settingsDataRaw);
-  return settingsData;
-};
-
-const engine = new Liquid({
-  root: [path.join(__dirname, '../components'), path.join(__dirname, '../../snippets')],
-  extname: '.liquid',
-});
 
 app.use('/static', express.static(path.join(__dirname, '../components')));
+
+const cache = {};
 
 // Proxy route to fetch the remote script
 app.get('/proxy/:store/:file', async (req, res) => {
     const { store, file } = req.params;
     const url = stores[store][file];
     if (!url) {
-      console.error('Error getting remote URL from config');
-      res.status(500).send('Error getting remote URL from config');    
+      console.error('Error getting remote URL from config (store, file):', store, file);
+      res.status(404)
+      return res.send('Error getting remote URL from config');  
+    }
+
+    const cacheKey = `${store}-${file}`;
+
+    if (cache[cacheKey]) {
+      console.log('Serving from cache:', cacheKey);
+      res.set('Content-Type', cache[cacheKey].contentType);
+      return res.send(cache[cacheKey].data);
     }
 
     try {
@@ -92,21 +95,6 @@ app.get('/proxy/:store/:file', async (req, res) => {
       res.status(500).send('Error fetching remote script');
     }
   });
-
-app.get('/:store/cssSettings', async (req, res) => {
-  const { store } = req.params;
-  const settingsData = await getSettingsData(store);
-  res.set('Content-Type', 'text/plain');
-  res.send(settingsData);
-});
-
-app.get('/:store/cssVariables', async (req, res) => {
-  const { store } = req.params;
-  const settingsData = await getSettingsData(store);
-  const cssVariables = await engine.renderFile('../../snippets/css-variables.liquid', settingsData);
-  res.set('Content-Type', 'text/plain');
-  res.send(cssVariables);
-});
 
 app.get('/', (req, res) => {
   const componentsDir = path.join(__dirname, '../components');
@@ -138,19 +126,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/:store/components/:component', async (req, res) => {
-  const {component, store } = req.params;
-  const mockData = {
-    title: "Recommended Products",
-    items: [
-      { name: "Product A", price: "$10.00" },
-      { name: "Product B", price: "$20.00" },
-      { name: "Product C" },
-    ],
-  };
+  const {component, store } = req.params;  
+  const mockDataPath = path.join(__dirname, `../components/${component}/mockData.json`);
+  const mockDataContent = await fs.readFile(mockDataPath, 'utf-8');
+  const mockData = JSON.parse(mockDataContent);
 
   try {
-    // const settingsData = getSettingsData(store);
-    // const cssVariables = await engine.renderFile('../../snippets/css-variables.liquid', settingsData);
     const cssVariablesStyleBlock = await getCssVariablesStyleBlock(store);
     const renderedHTML = await engine.renderFile(`${component}/${component}`, mockData);
 
@@ -161,6 +142,7 @@ app.get('/:store/components/:component', async (req, res) => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${component} Test</title>
+        ${getFontFaceStyleBlock(store)}
         ${cssVariablesStyleBlock}
         <script type="module" src="/proxy/${store}/jsThemeUrl"></script>
         <link href="/proxy/${store}/cssThemeUrl" rel="stylesheet" type="text/css" media="all">
