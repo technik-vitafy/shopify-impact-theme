@@ -473,37 +473,6 @@
         "logo_item_border": ""
       }
     },
-    "video_6npeey": {
-      "type": "video",
-      "blocks": {
-        "play_rUT8H3": {
-          "type": "play",
-          "settings": {}
-        },
-        "heading_x479R7": {
-          "type": "heading",
-          "settings": {
-            "text": "",
-            "heading_tag": "h5"
-          }
-        }
-      },
-      "block_order": [
-        "play_rUT8H3",
-        "heading_x479R7"
-      ],
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": false,
-        "autoplay": true,
-        "video_size": "sm",
-        "video": "shopify://files/videos/video uber uns.mp4",
-        "external_video_url": "",
-        "text_color": "#000000",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
-      }
-    },
     "media_grid_eMqYDB": {
       "type": "media-grid",
       "blocks": {
@@ -610,6 +579,37 @@
         "background": "",
         "background_gradient": ""
       }
+    },
+    "video_6npeey": {
+      "type": "video",
+      "blocks": {
+        "play_rUT8H3": {
+          "type": "play",
+          "settings": {}
+        },
+        "heading_x479R7": {
+          "type": "heading",
+          "settings": {
+            "text": "",
+            "heading_tag": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "play_rUT8H3",
+        "heading_x479R7"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "autoplay": true,
+        "video_size": "sm",
+        "video": "shopify://files/videos/video uber uns.mp4",
+        "external_video_url": "",
+        "text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
     }
   },
   "order": [
@@ -619,7 +619,7 @@
     "impact-text",
     "featured_collection_tV6ADd",
     "logo_list_mfhm8f",
-    "video_6npeey",
-    "media_grid_eMqYDB"
+    "media_grid_eMqYDB",
+    "video_6npeey"
   ]
 }
