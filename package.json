@@ -11,6 +11,7 @@
   "author": "Vitafy Brands",
   "license": "ISC",
   "devDependencies": {
+    "chokidar": "^4.0.1",
     "express": "^4.21.1",
     "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -23,7 +24,7 @@
     "jsdom": "^25.0.1",
     "liquidjs": "^10.18.0",
     "nodemon": "^3.1.7",
-    "chokidar": "^4.0.1",
+    "sass": "^1.81.0",
     "ws": "^8.18.0"
   }
 }

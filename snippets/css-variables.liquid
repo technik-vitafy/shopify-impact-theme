@@ -154,9 +154,11 @@ note that this may have impact on different places.
     {%- assign product_on_sale_accent_brightness = settings.product_on_sale_accent | color_brightness -%}
     {%- assign product_sold_out_badge_brightness = settings.product_sold_out_badge_background | color_brightness -%}
     {%- assign product_primary_badge_brightness = settings.product_primary_badge_background | color_brightness -%}
+    {%- assign text_secondary = settings.text_secondary | default: 'hsla(228, 7%, 44%, 1)' -%}
 
     --accent: {{ settings.primary_button_background.rgb }};
     --text-primary: {{ settings.text_color.rgb }};
+    --text-secondary: {{ text_secondary.rgb }};
     --background-primary: {{ settings.background.rgb }};
     --dialog-background: {{ settings.dialog_background.rgb }};
     --border-color: var(--text-color, var(--text-primary)) / 0.12;

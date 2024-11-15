@@ -1,4 +1,4 @@
-{
+export default {
     "title": "Recommended Products",
     "items": [
       { "name": "Product A", "price": "$10.00" },

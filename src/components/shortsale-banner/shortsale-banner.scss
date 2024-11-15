@@ -1,0 +1,18 @@
+.shortsale-banner {
+  &__main {
+    background-color: var(--shortsale-banner-bg, hsl(0 0% 97%));
+    border-radius: .5rem;
+    padding: .75rem;
+  }
+  &__headline {
+    font-weight: 700;
+  }
+  &__footnote {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+
+  }
+  &__subline {
+    color: var(--text-secondary);
+  }
+}

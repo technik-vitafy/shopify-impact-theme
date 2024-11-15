@@ -2,7 +2,7 @@ import express from 'express';
 import { Liquid } from 'liquidjs';
 import path from 'path';
 import fs from 'fs';
-import fsPromises from 'fs/promises';
+import sass from 'sass';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -152,11 +152,10 @@ app.get('/', (req, res) => {
 
 app.get('/:store/components/:component', async (req, res) => {
   const {component, store } = req.params;  
-  const mockDataPath = path.join(__dirname, `../components/${component}/mockData.json`);
-  const mockDataContent = await fsPromises.readFile(mockDataPath, 'utf-8');
-  const mockData = JSON.parse(mockDataContent);
+  const mockDataPath = path.join(__dirname, `../components/${component}/mockData.js`);
 
   try {
+    const { default: mockData } = await import(mockDataPath);
     const cssVariablesStyleBlock = await getCssVariablesStyleBlock(store);
     const renderedHTML = await engine.renderFile(`${component}/${component}`, mockData);
 
@@ -172,6 +171,7 @@ app.get('/:store/components/:component', async (req, res) => {
         <script type="module" src="/proxy/${store}/jsThemeUrl"></script>
         <link href="/proxy/${store}/cssThemeUrl" rel="stylesheet" type="text/css" media="all">
         ${WebSocketClientScript}
+        <link href="/assets/${component}/${component}.scss" rel="stylesheet" type="text/css" media="all">
       </head>
       <body>
         ${renderedHTML}
@@ -179,7 +179,34 @@ app.get('/:store/components/:component', async (req, res) => {
       </html>
     `);
   } catch (err) {
+    console.error(err);
     res.status(500).send('Error rendering component');
+  }
+});
+
+app.use('/assets', (req, res, next) => {
+  const requestedPath = req.path;
+  if (requestedPath.includes('..')) {
+    return res.status(400).send('Bad Request');
+  }
+  const filePath = path.join(__dirname, '../components', requestedPath);
+
+  if (filePath.endsWith('.scss')) {
+    try {
+      const result = sass.renderSync({ file: filePath });
+      res.set('Content-Type', 'text/css');
+      res.send(result.css);
+    } catch (err) {
+      console.error('Error compiling SCSS:', err);
+      res.status(500).send('Error compiling SCSS');
+    }
+  } else {
+    res.sendFile(filePath, (err) => {
+      if (err) {
+        console.error(err);
+        res.status(err.status).send('Error serving file');
+      }
+    });
   }
 });
 
