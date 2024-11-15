@@ -455,7 +455,8 @@
         "logo_RHLa79"
       ],
       "custom_css": [
-        ".section-stack {gap: 1rem;}"
+        ".section-stack {gap: 1rem;}",
+        ".section-full{padding-bottom: 0;}"
       ],
       "settings": {
         "full_width": true,
