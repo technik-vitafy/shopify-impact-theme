@@ -1,3 +1,7 @@
+#ignore build files
+/assets/vb-*
+/snippets/vb-*
+
 # Node.js
 node_modules/
 npm-debug.log

@@ -12,8 +12,18 @@
   "license": "ISC",
   "devDependencies": {
     "express": "^4.21.1",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-uglify": "^3.0.2",
     "jsdom": "^25.0.1",
     "liquidjs": "^10.18.0",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "chokidar": "^4.0.1",
+    "ws": "^8.18.0"
   }
 }

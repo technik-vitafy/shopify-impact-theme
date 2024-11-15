@@ -2,11 +2,14 @@ import express from 'express';
 import { Liquid } from 'liquidjs';
 import path from 'path';
 import fs from 'fs';
+import fsPromises from 'fs/promises';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { stores } from './config.js';
 import { JSDOM } from 'jsdom';
+import { WebSocketServer, WebSocket } from 'ws';
+import chokidar from 'chokidar';
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -19,6 +22,27 @@ const engine = new Liquid({
   root: [path.join(__dirname, '../components'), path.join(__dirname, '../../snippets')],
   extname: '.liquid',
 });
+
+const wss = new WebSocketServer({ noServer: true });
+const WebSocketClientScript = `
+<script>
+  const ws = new WebSocket('ws://' + window.location.host);
+  ws.onmessage = (event) => {
+    if (event.data === 'update') {
+      window.location.reload();
+    }
+  };
+  ws.onopen = () => {
+    console.log('WebSocket connection established');
+  };
+  ws.onerror = (error) => {
+    console.error('WebSocket error:', error);
+  };
+  ws.onclose = () => {
+    console.log('WebSocket connection closed');
+  };
+</script>
+`;
 
 const getFontFaceStyleBlock = (store) => {
   const fonts = stores[store].fonts;
@@ -113,6 +137,7 @@ app.get('/', (req, res) => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Components List</title>
+        ${WebSocketClientScript}
       </head>
       <body>
         <h1>Available Components</h1>
@@ -128,7 +153,7 @@ app.get('/', (req, res) => {
 app.get('/:store/components/:component', async (req, res) => {
   const {component, store } = req.params;  
   const mockDataPath = path.join(__dirname, `../components/${component}/mockData.json`);
-  const mockDataContent = await fs.readFile(mockDataPath, 'utf-8');
+  const mockDataContent = await fsPromises.readFile(mockDataPath, 'utf-8');
   const mockData = JSON.parse(mockDataContent);
 
   try {
@@ -146,6 +171,7 @@ app.get('/:store/components/:component', async (req, res) => {
         ${cssVariablesStyleBlock}
         <script type="module" src="/proxy/${store}/jsThemeUrl"></script>
         <link href="/proxy/${store}/cssThemeUrl" rel="stylesheet" type="text/css" media="all">
+        ${WebSocketClientScript}
       </head>
       <body>
         ${renderedHTML}
@@ -157,7 +183,31 @@ app.get('/:store/components/:component', async (req, res) => {
   }
 });
 
-
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+});
+
+server.on('upgrade', (request, socket, head) => {
+  wss.handleUpgrade(request, socket, head, (ws) => {
+    wss.emit('connection', ws, request);
+  });
+});
+
+const notifyClients = () => {
+  wss.clients.forEach(client => {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send('update');
+    }
+  });
+};
+
+const watcher = chokidar.watch(path.join(__dirname, '../components'), {
+  persistent: true,
+  ignoreInitial: true,
+  depth: 99 // Adjust depth as needed
+});
+
+watcher.on('all', (event, path) => {
+  console.log(`File ${event}: ${path}`);
+  notifyClients();
 });
