@@ -356,7 +356,7 @@
         "background": "#f6f6f7",
         "background_gradient": "linear-gradient(180deg, rgba(246, 246, 247, 0), rgba(246, 246, 247, 1) 27%, rgba(246, 246, 247, 1) 100%)",
         "heading_text_color": "",
-        "heading_gradient": "linear-gradient(180deg, rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0) 100%)",
+        "heading_gradient": "linear-gradient(180deg, rgba(0, 156, 204, 1), rgba(26, 26, 26, 0) 100%)",
         "text_color": "",
         "button_background": "",
         "button_text_color": ""
@@ -478,8 +478,7 @@
       "blocks": {
         "play_rUT8H3": {
           "type": "play",
-          "settings": {
-          }
+          "settings": {}
         },
         "heading_x479R7": {
           "type": "heading",
